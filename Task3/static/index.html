@@ -4,24 +4,35 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
     <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css">-->
-<!--    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>-->
+    <!--    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
     <style>
-/*        body {
-            background-color: #95aebc;
+        body {
+            background-color: #a0b9c7;
             color: white;
-        }*/
+        }
 
-        .popover-page1 .popover {
+        .overview-popover .popover {
             position: relative;
-            display: block;
-            margin: 20px;
+            display: table-row; /*inline-table;*/
+            /*float: left;*/
+            /*margin: 20px;*/
+            color: black;
+        }
+        .overview-popover .popover .arrow{
+            margin-left: -390px;
+        }
+        .items .popover .arrow{
+            margin-left: -310px;
+        }
+        .popover-title{
+            font-size: 30px;
         }
     </style>
     <script>
-        $("[data-toggle=popover]").popover();
-        $('.static-popover').show().css('position','relative');
+/*        $("[data-toggle=popover]").popover();*/
+/*        $('.static-popover').show().css('position','relative');*/
     </script>
 </head>
 <body>
@@ -48,11 +59,10 @@
     </div>
 </nav>
 
-<!--
 <div class="container-fluid">
     <div class="row">
         <div class="col-md-10">
-            <ul class="nav nav-tabs">
+            <ul class="nav nav-pills">
                 <li role="presentation"><a href="#">Overview</a></li>
                 <li role="presentation" class="disabled"><a href="#">Time Offs</a></li>
                 <li role="presentation" class="disabled"><a href="#">Purchases</a></li>
@@ -61,15 +71,39 @@
             </ul>
         </div>
     </div>
-</div>
--->
+    <div class="row">
+        <div class="col-md-10 overview-popover">
+            <div class="popover bottom">
+                <div class="arrow"></div>
+                <p class="popover-title">Overview</p>
 
+                <div class="popover-content">
+                    <div class="form-inline">
+                        <div class="form-group">
+                            <img src="../img/acc1.png" class="img-responsive" alt>
 
-<div class="popover bottom static-popover" id="popover-page1">
-    <div class="arrow"></div>
-    <h3 class="popover-title">Popover left</h3>
-    <div class="popover-content">
-        <p>Sed posuere consectetur est at lobortis. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.</p>
+                        </div>
+                    </div>
+
+                    <div class="row items">
+                        <div class="col-md-11">
+                            <p>Sed posuere consectetur est at lobortis. Aenean eu leo quam. Pellentesque
+                                ornare sem lacinia quam venenatis vestibulum.</p>
+                            <div class="popover bottom">
+                                <div class="arrow"></div>
+                                <div class="popover-content">
+                                    <p>Sed posuere consectetur est at lobortis. Aenean eu leo quam. Pellentesque
+                                        ornare sem lacinia quam venenatis vestibulum.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <p class="popover-title">Active stories</p>
+            </div>
+        </div>
     </div>
 </div>
 
