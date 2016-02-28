@@ -9,25 +9,36 @@
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
     <style>
         body {
-            background-color: #a0b9c7;
+            background-color: #6b7e8c;
             color: white;
         }
-
         .overview-popover .popover {
             position: relative;
             display: table-row; /*inline-table;*/
             /*float: left;*/
-            /*margin: 20px;*/
+            margin: 100px 100px 100px 100px;
             color: black;
         }
+        .item-popover .popover{
+            background-color: #e8f2fa;
+            position: relative;
+            display: table-row;
+        }
         .overview-popover .popover .arrow{
-            margin-left: -390px;
+            /*margin-left: -390px;*/
+            margin-left: calc(54% - 100%);
         }
         .items .popover .arrow{
-            margin-left: -310px;
+            /*margin-left: -310px;*/
+            /*margin-left: calc(130% - 90%);*/
         }
         .popover-title{
             font-size: 30px;
+        }
+        .img-responsive{
+            border-color: #0f0f0f;
+            float:left;
+            margin: 7px 7px 7px 0;
         }
     </style>
     <script>
@@ -80,8 +91,34 @@
                 <div class="popover-content">
                     <div class="form-inline">
                         <div class="form-group">
-                            <img src="../img/acc1.png" class="img-responsive" alt>
+                            <p>
+                                <img src="../img/acc1.png" class="img-responsive" alt>
+                                <a>Christina Frerichs</a>
+                                <a class="disabled">asks for time off.</a>
+                                <a><i class="glyphicon glyphicon-calendar"></i>May 15-02, 10</a>
+                            </p>
+                            <div class="row">
+                                <div class="col-md-10 item-popover">
+                                    <div class="popover bottom">
+                                        <div class="arrow"></div>
+                                        <div class="popover-content">
+                                            <p>I need some rest - <a>Shrona L.Brown </a>1 hour ago</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
+                    <div class="form-inline">
+                        <div class="form-group">
+                            <p>
+                                <img src="../img/acc2.png" class="img-responsive" alt>
+                                <a>Deniele Longo</a>
+                                <q>asks for time off.</q>
+                                <a><i class="glyphicon glyphicon-calendar"></i>May 15-02, 10</a>
+
+                            </p>
                         </div>
                     </div>
 
